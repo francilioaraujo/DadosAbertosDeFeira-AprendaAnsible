@@ -1,0 +1,9 @@
+---
+- name: Ping on hosts
+  hosts: nodes
+  remote_user: root
+
+  tasks:
+  - name: Ping
+    ansible.builtin.ping:
+
