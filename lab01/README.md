@@ -1,4 +1,4 @@
-## Lab 01
+## Lab 01 - Ping 
 
 
 ## Como usar
