@@ -1,0 +1,9 @@
+[nodes]
+node2 
+node3 
+
+[apache]
+node1 
+
+[all:vars]
+ansible_connection=docker

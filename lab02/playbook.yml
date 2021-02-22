@@ -1,0 +1,19 @@
+---
+- name: Ping on hosts
+  hosts: apache
+
+  tasks:
+  - name: Ping
+    ansible.builtin.ping:
+  - name: Apt-get Update
+    ansible.builtin.apt:
+      update_cache: yes
+  - name: Install apache
+    ansible.builtin.apt:
+      name: apache2
+      state: present
+  - name: Start service httpd, if not started
+    ansible.builtin.service:
+      name: apache2
+      state: started
+
