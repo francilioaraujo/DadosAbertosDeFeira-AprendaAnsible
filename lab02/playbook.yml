@@ -3,16 +3,14 @@
   hosts: apache
 
   tasks:
-  - name: Ping
-    ansible.builtin.ping:
-  - name: Apt-get Update
+  - name: Apt-get update
     ansible.builtin.apt:
       update_cache: yes
-  - name: Install apache
+  - name: Checa se existe apache2, se n instala
     ansible.builtin.apt:
       name: apache2
       state: present
-  - name: Start service httpd, if not started
+  - name: Inicia apache2 caso n esteja iniciado
     ansible.builtin.service:
       name: apache2
       state: started
