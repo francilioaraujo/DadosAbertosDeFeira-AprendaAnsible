@@ -22,8 +22,12 @@ usado para realizar operações do gerenciador de pacotes apt
 #### [service](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html): 
 usado para realizar operações com serviços na máquina
 
-
 ## Executando
 
 Para executar, dentro do diretório `lab02`:   
 `ansible-playbook playbook.yml`
+
+## Resumo
+Com esse lab foram exercitados os conceitos:
+* uso do módulo apt
+* uso do módulo service
