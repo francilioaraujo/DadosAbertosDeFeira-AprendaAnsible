@@ -17,9 +17,9 @@ Esse playbook realiza as seguintes tarefas:
 3. Verifica se o serviço apache2 está iniciado, senão inicia
 
 Módulos usados:
-#### [apt](): 
+#### [apt](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html): 
 usado para realizar operações do gerenciador de pacotes apt
-#### [service](): 
+#### [service](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html): 
 usado para realizar operações com serviços na máquina
 
 
