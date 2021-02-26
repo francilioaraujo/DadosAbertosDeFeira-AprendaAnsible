@@ -11,10 +11,12 @@
 0 directories, 4 files
 ```
 ## Como funciona
-Esse playbook realiza as seguintes tarefas:   
-1. Realiza um apt-get update nas máquinas alvos
-2. Verifica a máquina tem o apache2 instalado, senão instala
+Esse playbook executa a instalação e configuração do apache no grupo de hosts `[apache]` (é possível ver no arquivo `hosts`), tarefas executadas:
+1. Realiza um apt-get update
+2. Verifica se tem o apache2 instalado, senão instala
 3. Verifica se o serviço apache2 está iniciado, senão inicia
+
+Para verificar se está funcionando, abrir no navegador: http://localhost
 
 Módulos usados:
 #### [apt](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html): 
