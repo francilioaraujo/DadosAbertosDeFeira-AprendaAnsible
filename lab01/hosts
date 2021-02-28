@@ -1,7 +1,7 @@
-[nodes]
-node1 
-node2 
-node3 
+[web]
+node1 ansible_host=192.168.0.11
+node2 ansible_host=192.168.0.12
+node3 ansible_host=192.168.0.13
 
-[nodes:vars]
-ansible_connection=docker
+[control]
+ansible ansible_host=44.55.66.77

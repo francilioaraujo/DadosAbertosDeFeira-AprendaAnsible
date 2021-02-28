@@ -1,6 +1,6 @@
 ---
 - name: Ping on hosts
-  hosts: nodes
+  hosts: web
 
   tasks:
   - name: Ping
