@@ -1,20 +1,22 @@
 version: '3'
 
+x-base-image:
+  &base_image_config
+  image: geerlingguy/docker-ubuntu1804-ansible
+  privileged: yes
+  volumes:
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
 services:
   node1:
-    image: &base_image geerlingguy/docker-ubuntu1804-ansible
-    privileged: yes
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    ports:
-      - 80:80
+    << : *base_image_config
+    container_name: 192.168.0.11
   node2:
-    image: *base_image
-    privileged: yes
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    << : *base_image_config
+    container_name: 192.168.0.12
   node3:
-    image: *base_image
-    privileged: yes
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    << : *base_image_config
+    container_name: 192.168.0.13
+  control:
+    << : *base_image_config
+    container_name: 44.55.66.77
