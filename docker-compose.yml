@@ -1,3 +1,5 @@
+# vim: set expandtab sw=2 ts=2 sts=2 :
+
 version: '3'
 
 x-base-image:
@@ -22,3 +24,5 @@ services:
   control:
     << : *base_image_config
     container_name: 44.55.66.77
+    ports:
+      - 127.0.0.1:81:80

@@ -1,4 +1,4 @@
-[nodes]
+[app]
 node2 ansible_host=192.168.0.12
 node3 ansible_host=192.168.0.13
 
